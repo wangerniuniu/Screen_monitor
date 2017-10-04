@@ -15,7 +15,12 @@ def ftpconnect(host, username, password):
     return ftp
 
 #从ftp下载文件
-
+def downloadfile(ftp, remotepath, localpath):
+    bufsize = 1024
+    fp = open(localpath, 'wb')
+    ftp.retrbinary('RETR ' + remotepath, fp.write, bufsize)
+    ftp.set_debuglevel(0)
+    fp.close()
 #从本地上传文件到ftp
 def uploadfile(ftp, remotepath, localpath):
     bufsize = 1024
