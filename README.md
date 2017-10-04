@@ -7,7 +7,7 @@
 * pycharm 2017.2.3
 * python3.5
 ##原理
-+ host:     服务器IP
++ host:     服务器IP地址
 + username：FTP账号
 + password：FTP密码
 
